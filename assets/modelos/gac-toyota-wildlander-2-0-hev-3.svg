@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+      <defs>
+        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#EDF5FA"/>
+          <stop offset="1" stop-color="#DCEBF4"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="720" rx="36" fill="url(#bg)"/>
+      <circle cx="980" cy="130" r="220" fill="#7ECFFF" opacity=".08"/>
+      <path d="M235 445 L310 335 Q350 275 440 255 L730 245 Q825 250 885 325 L950 405 L1015 425 Q1040 433 1040 465 L1040 505 L975 505 Q958 575 885 575 Q812 575 795 505 L435 505 Q418 575 345 575 Q272 575 255 505 L190 505 L190 472 Q190 447 235 445Z"
+            fill="none" stroke="#7ECFFF" stroke-width="18" stroke-linejoin="round"/>
+      <circle cx="345" cy="505" r="54" fill="#7ECFFF" opacity=".14" stroke="#7ECFFF" stroke-width="15"/>
+      <circle cx="885" cy="505" r="54" fill="#7ECFFF" opacity=".14" stroke="#7ECFFF" stroke-width="15"/>
+      <path d="M380 335 Q430 282 500 275 L715 275 Q770 280 815 335Z" fill="#7ECFFF" opacity=".13"/>
+      <text x="70" y="92" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1D9E75">GAC Toyota</text>
+      <text x="70" y="148" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="#0D1F35">Wildlander 2.0 HEV 2026</text>
+      <text x="70" y="194" font-family="Arial, sans-serif" font-size="24" fill="#617187">SUV para viajar y uso exigente</text>
+      <rect x="70" y="615" width="310" height="52" rx="26" fill="#0D1F35"/>
+      <text x="225" y="649" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Espacio y practicidad</text>
+      <text x="1130" y="665" text-anchor="end" font-family="Arial, sans-serif" font-size="17" fill="#617187">Fotografía oficial pendiente</text>
+    </svg>
