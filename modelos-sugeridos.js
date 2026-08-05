@@ -12,8 +12,8 @@
   let activeSegment = "all";
   let activeModel = null;
   const photoLightbox = document.getElementById("catalog-lightbox");
-  const photoLightboxImage = photoLightbox.querySelector("img");
-  const photoLightboxCaption = photoLightbox.querySelector("p");
+  const photoLightboxImage = photoLightbox?.querySelector("img") || null;
+  const photoLightboxCaption = photoLightbox?.querySelector("p") || null;
 
   const ENERGY = [
     ["all","Todos"],
@@ -153,25 +153,27 @@
   clear.addEventListener("click",()=>{activeEnergy="all";activeSegment="all";activeModel=null;update()});
   window.addEventListener("scroll",()=>back.style.display=window.scrollY>900?"block":"none");
   back.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
-  catalog.addEventListener("click", event => {
-    const photo = event.target.closest(".catalog-photo");
-    if (!photo) return;
-    photoLightboxImage.src = photo.dataset.src;
-    photoLightboxImage.alt = photo.dataset.caption;
-    photoLightboxCaption.textContent = photo.dataset.caption;
-    photoLightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-  });
-  const closePhotoLightbox = () => {
-    photoLightbox.hidden = true;
-    photoLightboxImage.src = "";
-    document.body.style.overflow = "";
-  };
-  photoLightbox.addEventListener("click", event => {
-    if (event.target === photoLightbox || event.target.closest(".catalog-lightbox__close")) closePhotoLightbox();
-  });
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && !photoLightbox.hidden) closePhotoLightbox();
-  });
+  if (photoLightbox && photoLightboxImage && photoLightboxCaption) {
+    catalog.addEventListener("click", event => {
+      const photo = event.target.closest(".catalog-photo");
+      if (!photo) return;
+      photoLightboxImage.src = photo.dataset.src;
+      photoLightboxImage.alt = photo.dataset.caption;
+      photoLightboxCaption.textContent = photo.dataset.caption;
+      photoLightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+    const closePhotoLightbox = () => {
+      photoLightbox.hidden = true;
+      photoLightboxImage.src = "";
+      document.body.style.overflow = "";
+    };
+    photoLightbox.addEventListener("click", event => {
+      if (event.target === photoLightbox || event.target.closest(".catalog-lightbox__close")) closePhotoLightbox();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && !photoLightbox.hidden) closePhotoLightbox();
+    });
+  }
   update();
 })();
