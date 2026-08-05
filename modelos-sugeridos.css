@@ -872,3 +872,167 @@ p{
     padding:0 20px 22px;
   }
 }
+
+
+/* =========================================================
+   V5 — MENOS SCROLL MÓVIL Y UN SOLO CTA POR MODELO
+   ========================================================= */
+
+/* El filtro comienza directamente después de las preguntas */
+.navigation-hub{
+  padding:24px 7vw 32px;
+}
+.filter-hub-heading,
+.filter-layout,
+.filter-static-panel{
+  display:none!important;
+}
+.filter-toolbar{
+  width:min(1320px,100%);
+  margin:0 auto 10px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:14px;
+  min-height:24px;
+}
+.filter-counter{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:600;
+}
+.clear-filters{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:0 13px;
+  border:1px solid #D6E2E8;
+  border-radius:999px;
+  background:#FFFFFF;
+  color:var(--green);
+  font-family:"DM Sans",sans-serif;
+  font-size:11px;
+  font-weight:700;
+  cursor:pointer;
+}
+.clear-filters:hover{
+  border-color:rgba(29,158,117,.5);
+  background:var(--soft);
+}
+.filter-accordion{
+  width:min(1320px,100%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr 1.18fr;
+  gap:12px;
+}
+.filter-panel{
+  display:block!important;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:#F8FAFB;
+  overflow:hidden;
+}
+.filter-panel summary{
+  min-height:64px;
+  padding:13px 17px;
+}
+.filter-panel summary span{
+  color:#52667A;
+  font-size:12px;
+  font-weight:650;
+}
+.filter-panel summary strong{
+  color:var(--green);
+  font-size:12px;
+  font-weight:700;
+}
+.filter-options{
+  padding:0 14px 14px;
+}
+.filter-options--models{
+  max-height:245px;
+  overflow:auto;
+}
+
+/* El rango de precio se convierte también en el principal punto de conversión */
+.model-range{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.model-whatsapp{
+  width:100%;
+  min-height:45px;
+  margin-top:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 15px;
+  border-radius:12px;
+  background:var(--green);
+  color:#FFFFFF;
+  font-family:"DM Sans",sans-serif;
+  font-size:12px;
+  font-weight:750;
+  letter-spacing:0;
+  box-shadow:0 9px 22px rgba(29,158,117,.21);
+  transition:transform .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.model-whatsapp:hover{
+  background:#178763;
+  transform:translateY(-1px);
+  box-shadow:0 12px 27px rgba(29,158,117,.27);
+}
+
+/* Ya no existe un CTA repetido dentro de cada versión */
+.version-whatsapp{
+  display:none!important;
+}
+.version-card{
+  min-height:0;
+}
+.version-card>p{
+  margin-bottom:0;
+}
+
+@media(max-width:1080px){
+  .filter-accordion{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:700px){
+  .navigation-hub{
+    padding:14px 16px 22px;
+  }
+  .filter-toolbar{
+    margin-bottom:8px;
+    justify-content:space-between;
+  }
+  .filter-accordion{
+    gap:8px;
+  }
+  .filter-panel summary{
+    min-height:54px;
+    padding:10px 14px;
+  }
+  .filter-panel summary span,
+  .filter-panel summary strong{
+    font-size:11px;
+  }
+  .filter-options{
+    padding:0 10px 11px;
+  }
+  .filter-chip{
+    min-height:35px;
+    padding:0 12px;
+    font-size:11px;
+  }
+  .quick-guidance{
+    padding-bottom:18px;
+  }
+  .model-whatsapp{
+    min-height:44px;
+  }
+}

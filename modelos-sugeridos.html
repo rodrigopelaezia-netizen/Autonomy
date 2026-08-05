@@ -47,34 +47,27 @@
     </section>
 
     <section id="filter-navigation" class="navigation-hub">
-      <div class="filter-hub-heading">
-        <div>
-          <p class="eyebrow">Encuentra tu punto de partida</p>
-          <h2>Reduce la lista con criterios simples</h2>
-          <p>Filtra por tecnología o tipo de vehículo. Luego entra directamente al modelo que quieras revisar.</p>
-        </div>
-        <div class="filter-status">
-          <span class="filter-counter"></span>
-          <button class="clear-filters" type="button">Restablecer filtros</button>
-        </div>
+      <div class="filter-toolbar">
+        <span class="filter-counter"></span>
+        <button class="clear-filters" type="button">Limpiar filtros</button>
       </div>
 
-      <div class="filter-layout">
-        <section class="filter-static-panel" aria-labelledby="energy-filter-title">
-          <div class="filter-static-heading">
-            <span id="energy-filter-title">Tipo de energía</span>
+      <div class="filter-accordion">
+        <details class="filter-panel" id="energy-filter-panel">
+          <summary>
+            <span>Tipo de energía</span>
             <strong id="energy-filter-summary">Todos</strong>
-          </div>
-          <nav id="energy-nav" class="filter-options filter-options--static" aria-label="Filtrar por energía"></nav>
-        </section>
+          </summary>
+          <nav id="energy-nav" class="filter-options" aria-label="Filtrar por energía"></nav>
+        </details>
 
-        <section class="filter-static-panel" aria-labelledby="segment-filter-title">
-          <div class="filter-static-heading">
-            <span id="segment-filter-title">Segmento</span>
+        <details class="filter-panel" id="segment-filter-panel">
+          <summary>
+            <span>Segmento</span>
             <strong id="segment-filter-summary">Todos</strong>
-          </div>
-          <nav id="segment-nav" class="filter-options filter-options--static" aria-label="Filtrar por segmento"></nav>
-        </section>
+          </summary>
+          <nav id="segment-nav" class="filter-options" aria-label="Filtrar por segmento"></nav>
+        </details>
 
         <details class="filter-panel filter-panel--models" id="model-filter-panel">
           <summary>
@@ -373,11 +366,7 @@ try {
     };
   
     const versionCard = (model, version) => {
-      const message = encodeURIComponent(
-        `*Consulta AutoNomy — ${model.brand} ${model.name} 2026*\nVersión: ${version.name}\n\nHola, quiero conocer disponibilidad, diferencias y tiempo estimado.`
-      );
-  
-      const meta = versionMeta(model, version);
+const meta = versionMeta(model, version);
   
       return `
         <article class="version-card ${version.recommended ? "recommended" : ""}">
@@ -391,13 +380,6 @@ try {
                 `<span>${label}<b>${value}</b></span>`
               ).join("")}
             </div>` : ""}
-  
-          <a class="version-whatsapp"
-             href="${whatsappBase}?text=${message}"
-             target="_blank"
-             rel="noopener">
-            Consultar esta versión
-          </a>
         </article>`;
     };
   
@@ -511,6 +493,12 @@ try {
               <small>Precio referencial puesto en Bolivia</small>
               <strong>${priceRange(model)}</strong>
               <span>Un solo rango para todas las versiones mostradas.</span>
+              <a class="model-whatsapp"
+                 href="${whatsappBase}?text=${encodeURIComponent(`*Consulta AutoNomy — ${model.brand} ${model.name} 2026*\n\nHola, quiero conocer disponibilidad, versiones y precio final puesto en Bolivia.`)}"
+                 target="_blank"
+                 rel="noopener">
+                Consultar este modelo
+              </a>
             </aside>
           </div>
   
@@ -518,7 +506,7 @@ try {
   
           <div class="versions-heading">
             <h4>Versiones recomendadas</h4>
-            <p>Primero explicamos qué aporta cada una; el precio se presenta como un único rango por modelo.</p>
+            <p>Compara qué aporta cada versión. El precio se presenta como un único rango por modelo.</p>
           </div>
   
           <div class="version-grid" style="--version-count:${model.versions.length}">

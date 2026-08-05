@@ -254,11 +254,7 @@
   };
 
   const versionCard = (model, version) => {
-    const message = encodeURIComponent(
-      `*Consulta AutoNomy — ${model.brand} ${model.name} 2026*\nVersión: ${version.name}\n\nHola, quiero conocer disponibilidad, diferencias y tiempo estimado.`
-    );
-
-    const meta = versionMeta(model, version);
+const meta = versionMeta(model, version);
 
     return `
       <article class="version-card ${version.recommended ? "recommended" : ""}">
@@ -272,13 +268,6 @@
               `<span>${label}<b>${value}</b></span>`
             ).join("")}
           </div>` : ""}
-
-        <a class="version-whatsapp"
-           href="${whatsappBase}?text=${message}"
-           target="_blank"
-           rel="noopener">
-          Consultar esta versión
-        </a>
       </article>`;
   };
 
