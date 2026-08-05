@@ -1,23 +1,21 @@
-AUTONOMY.BO — SITIO FINAL INTEGRADO
-
-Páginas:
-- index.html: preventa de las tres unidades embarcadas.
-- modelos-sugeridos.html: guía de 27 modelos y 67 versiones 2026.
+AUTONOMY.BO — VERSIÓN FINAL INTEGRADA
 
 Incluye:
-- Navegación entre ambas páginas.
-- Filtros por tecnología y segmento.
-- Selección directa de modelo.
-- Versiones, autonomías CLTC y precios referenciales.
-- Comparativa desplegable por modelo.
-- Contacto por WhatsApp al +591 63560315.
-- Diseño responsive.
-- Archivos PDF de las tres unidades en preventa.
-- Galerías reales para los modelos con fotografías disponibles.
-- Marcadores visuales claros donde la fotografía oficial del catálogo todavía está pendiente.
+- Landing de preventa aprobada.
+- Página completa de Modelos sugeridos con 27 modelos y 67 versiones.
+- Tres fotografías reales por cada modelo.
+- Galerías ampliables en la página de modelos.
+- Cabecera y menú idénticos en ambas páginas.
+- Tipografía de enlaces y filtros refinada para mayor legibilidad.
+- Rango de precio por modelo y precio individual por versión.
+- Matrices técnicas desplegables.
+- Contacto de WhatsApp +591 63560315.
 
-Para Netlify:
+Cómo revisar localmente:
 1. Descomprime el ZIP.
-2. Arrastra la carpeta completa a Netlify Drop.
-3. No necesita comando de compilación ni carpeta especial.
-4. La página principal es index.html.
+2. Abre index.html.
+3. Entra a Modelos sugeridos desde el menú.
+
+Para Netlify Drop:
+- Arrastra la carpeta descomprimida completa.
+- No necesita comando de compilación.

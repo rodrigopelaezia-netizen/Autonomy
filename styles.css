@@ -281,3 +281,18 @@ img{display:block;max-width:100%}
   font-size:14px;
 }
 .catalog-link:hover{text-decoration:underline}
+
+/* Refinamiento tipográfico de enlaces */
+.launch-banner__button,
+.model-links a,
+.model-pager a,
+.inline-video,
+.catalog-link{
+  font-family:Inter,Aptos,"Segoe UI",Arial,sans-serif;
+  font-weight:760;
+  letter-spacing:.005em;
+}
+.launch-banner__button{font-size:14px}
+.model-links{font-size:14px;gap:22px}
+.model-links a{padding:8px 0;line-height:1.25}
+.model-links a:hover{text-decoration:none;color:#0B765A}
