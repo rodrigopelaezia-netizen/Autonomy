@@ -1270,3 +1270,144 @@ p{
     padding:16px;
   }
 }
+
+
+/* =========================================================
+   V7 — SEGMENTOS MÁS DIFERENCIADOS Y FOTOS SIN ETIQUETAS
+   ========================================================= */
+
+/* Eliminamos cualquier texto superpuesto en las fotografías */
+.model-real-gallery figcaption,
+.catalog-lightbox p{
+  display:none!important;
+}
+
+/* Cada segmento tiene una identidad visual clara */
+.segment-section{
+  position:relative;
+  padding-top:78px;
+  padding-bottom:82px;
+  border-top:0;
+}
+.segment-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:10px;
+  background:var(--segment-accent,#1D9E75);
+}
+
+/* Compactos urbanos */
+.segment-section[data-segment-section="compactos"]{
+  background:#EAF7F2!important;
+  --segment-accent:#1D9E75;
+}
+.segment-section[data-segment-section="compactos"] .segment-index{
+  color:#147A5C;
+}
+
+/* Sedanes */
+.segment-section[data-segment-section="sedanes"]{
+  background:#EAF1F8!important;
+  --segment-accent:#3F6F97;
+}
+.segment-section[data-segment-section="sedanes"] .segment-index{
+  color:#315F86;
+}
+
+/* SUV urbanos pequeños */
+.segment-section[data-segment-section="suv-urbanos"]{
+  background:#F4F0E7!important;
+  --segment-accent:#A37D3D;
+}
+.segment-section[data-segment-section="suv-urbanos"] .segment-index{
+  color:#806329;
+}
+
+/* SUV compactos familiares */
+.segment-section[data-segment-section="suv-compactos"]{
+  background:#EDF3F7!important;
+  --segment-accent:#587A91;
+}
+.segment-section[data-segment-section="suv-compactos"] .segment-index{
+  color:#476A82;
+}
+
+/* SUV medianos familiares */
+.segment-section[data-segment-section="suv-medianos"]{
+  background:#EDEBF4!important;
+  --segment-accent:#6C628A;
+}
+.segment-section[data-segment-section="suv-medianos"] .segment-index{
+  color:#5A5077;
+}
+
+/* Off-road y aventura */
+.segment-section[data-segment-section="aventureros"]{
+  background:#F1ECE5!important;
+  --segment-accent:#8A6640;
+}
+.segment-section[data-segment-section="aventureros"] .segment-index{
+  color:#745431;
+}
+
+/* HEV y uso exigente */
+.segment-section[data-segment-section="exigentes"]{
+  background:#E8EEF0!important;
+  --segment-accent:#375866;
+}
+.segment-section[data-segment-section="exigentes"] .segment-index{
+  color:#2D4D5A;
+}
+
+/* La cabecera de cada segmento refuerza el cambio sin añadir otra caja pesada */
+.segment-header{
+  padding:0 4px 25px;
+  margin-bottom:28px;
+  border-bottom:1px solid rgba(13,31,53,.14);
+}
+.segment-header h2{
+  color:#102539;
+}
+.segment-header p{
+  max-width:720px;
+  color:#526678;
+}
+
+/* Las tarjetas conservan el blanco para generar contraste contra cada fondo */
+.segment-section .model-card{
+  background:#FFFFFF;
+  border-color:rgba(13,31,53,.12);
+  box-shadow:0 24px 62px rgba(13,31,53,.10);
+}
+
+/* Neutralizamos reglas previas por nth-of-type que mezclaban los segmentos */
+.segment-section:nth-of-type(odd),
+.segment-section:nth-of-type(even),
+.segment-section:nth-of-type(3n){
+  background:inherit;
+}
+
+/* Fotografías más limpias */
+.model-real-gallery figure{
+  cursor:zoom-in;
+}
+.model-real-gallery img{
+  background:#F2F5F6;
+}
+
+@media(max-width:700px){
+  .segment-section{
+    padding-top:54px;
+    padding-bottom:56px;
+  }
+  .segment-section::before{
+    height:7px;
+  }
+  .segment-header{
+    padding-bottom:19px;
+    margin-bottom:22px;
+  }
+}
