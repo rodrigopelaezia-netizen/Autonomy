@@ -1660,3 +1660,655 @@ body{
     font-size:13px;
   }
 }
+
+
+/* =========================================================
+   V11 — SEGMENTOS COMO BLOQUES COMPLETOS + LECTURA MÁS GRANDE
+   ========================================================= */
+
+/* Escala general de lectura */
+html{
+  font-size:18px;
+}
+body{
+  font-size:18px;
+  line-height:1.68;
+  letter-spacing:-0.012em;
+  color:#142335;
+}
+
+/* Cabecera y navegación más legibles */
+.site-header{
+  min-height:84px;
+}
+.nav-links a{
+  font-size:17px !important;
+  min-height:48px !important;
+  padding:0 18px !important;
+}
+.header-cta{
+  min-height:48px !important;
+  min-width:122px;
+  font-size:16px !important;
+}
+
+/* Hero más legible */
+.page-hero{
+  padding:52px 7vw 36px;
+}
+.page-hero h1{
+  font-size:clamp(58px, 7vw, 96px) !important;
+  line-height:0.96;
+}
+.page-hero > div:first-child > p:last-child{
+  font-size:22px !important;
+  line-height:1.62 !important;
+  max-width:860px;
+}
+.hero-signature{
+  font-size:15px !important;
+  line-height:1.55 !important;
+  max-width:360px;
+}
+
+/* Preguntas iniciales */
+.quick-guidance{
+  padding:18px 7vw 22px;
+  gap:16px;
+}
+.quick-guidance article{
+  padding:22px 24px !important;
+}
+.quick-guidance strong{
+  font-size:18px !important;
+  line-height:1.3;
+}
+.quick-guidance span{
+  font-size:15px !important;
+  line-height:1.58 !important;
+}
+
+/* Filtros más grandes y legibles */
+.navigation-hub{
+  padding:16px 7vw 26px;
+}
+.filter-toolbar{
+  margin:0 auto 12px !important;
+}
+.filter-counter{
+  font-size:14px !important;
+}
+.clear-filters{
+  min-height:42px !important;
+  padding:0 16px !important;
+  font-size:14px !important;
+}
+.filter-stack{
+  gap:14px !important;
+}
+.filter-panel--premium,
+.filter-panel{
+  border-radius:20px !important;
+}
+.filter-panel--premium summary,
+.filter-panel summary{
+  min-height:72px !important;
+  padding:16px 20px !important;
+}
+.filter-panel--premium summary span,
+.filter-panel summary span{
+  font-size:15px !important;
+}
+.filter-panel--premium summary strong,
+.filter-panel summary strong{
+  font-size:15px !important;
+}
+.filter-chip{
+  min-height:46px !important;
+  padding:0 17px !important;
+  font-size:15px !important;
+  font-weight:650 !important;
+}
+
+/* ===== Segmentos realmente diferenciados ===== */
+.segment-section{
+  position:relative;
+  padding:0 5vw 84px !important;
+  margin:0;
+  border-top:1px solid rgba(13,31,53,.06);
+  border-bottom:1px solid rgba(13,31,53,.06);
+}
+.segment-section + .segment-section{
+  margin-top:0;
+}
+
+/* Fondos completos por segmento, más notorios */
+.segment-section:nth-of-type(1){ background:linear-gradient(180deg,#D7E5F3 0%, #E7EFF7 100%) !important; }
+.segment-section:nth-of-type(2){ background:linear-gradient(180deg,#CFECDD 0%, #E1F5EA 100%) !important; }
+.segment-section:nth-of-type(3){ background:linear-gradient(180deg,#CBE9FA 0%, #DDF2FC 100%) !important; }
+.segment-section:nth-of-type(4){ background:linear-gradient(180deg,#D9E5EF 0%, #E9F0F5 100%) !important; }
+.segment-section:nth-of-type(5){ background:linear-gradient(180deg,#DCE7E3 0%, #ECF3F0 100%) !important; }
+.segment-section:nth-of-type(6){ background:linear-gradient(180deg,#D4E4DE 0%, #E8F2EE 100%) !important; }
+.segment-section:nth-of-type(7){ background:linear-gradient(180deg,#D6E1E9 0%, #EAF0F4 100%) !important; }
+
+/* Cabecera del segmento como portada del bloque */
+.segment-header{
+  width:auto !important;
+  max-width:none !important;
+  margin:0 -5vw 34px !important;
+  padding:36px 7vw 32px !important;
+  border-bottom:3px solid rgba(255,255,255,.22);
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.12);
+}
+
+.segment-section:nth-of-type(1) .segment-header{ background:#0D1F35 !important; color:#fff !important; }
+.segment-section:nth-of-type(2) .segment-header{ background:#1D9E75 !important; color:#fff !important; }
+.segment-section:nth-of-type(3) .segment-header{ background:#7ECFFF !important; color:#0D1F35 !important; }
+.segment-section:nth-of-type(4) .segment-header{ background:#0D1F35 !important; color:#fff !important; box-shadow:inset 0 -4px 0 #1D9E75; }
+.segment-section:nth-of-type(5) .segment-header{ background:#1D9E75 !important; color:#fff !important; box-shadow:inset 0 -4px 0 #7ECFFF; }
+.segment-section:nth-of-type(6) .segment-header{ background:#0D1F35 !important; color:#fff !important; box-shadow:inset 0 -4px 0 #7ECFFF; }
+.segment-section:nth-of-type(7) .segment-header{ background:#1D9E75 !important; color:#fff !important; box-shadow:inset 0 -4px 0 #0D1F35; }
+
+.segment-header .segment-index{
+  font-size:14px !important;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.segment-section:nth-of-type(1) .segment-header .segment-index,
+.segment-section:nth-of-type(4) .segment-header .segment-index,
+.segment-section:nth-of-type(6) .segment-header .segment-index{
+  color:#7ECFFF !important;
+}
+.segment-section:nth-of-type(2) .segment-header .segment-index,
+.segment-section:nth-of-type(5) .segment-header .segment-index,
+.segment-section:nth-of-type(7) .segment-header .segment-index{
+  color:#E8F8F3 !important;
+}
+.segment-section:nth-of-type(3) .segment-header .segment-index{
+  color:#0D1F35 !important;
+}
+.segment-header h2{
+  margin:8px 0 10px !important;
+  font-size:clamp(38px, 4.4vw, 62px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-0.04em !important;
+}
+.segment-header p{
+  max-width:900px !important;
+  font-size:18px !important;
+  line-height:1.62 !important;
+}
+.segment-section:nth-of-type(1) .segment-header p,
+.segment-section:nth-of-type(2) .segment-header p,
+.segment-section:nth-of-type(4) .segment-header p,
+.segment-section:nth-of-type(5) .segment-header p,
+.segment-section:nth-of-type(6) .segment-header p,
+.segment-section:nth-of-type(7) .segment-header p{
+  color:rgba(255,255,255,.86) !important;
+}
+.segment-section:nth-of-type(3) .segment-header p{
+  color:rgba(13,31,53,.84) !important;
+}
+
+/* Tarjetas del modelo más grandes */
+.model-card{
+  border-radius:28px !important;
+  box-shadow:0 18px 48px rgba(13,31,53,.10) !important;
+  margin-bottom:42px !important;
+}
+.model-topline{
+  padding:36px 38px 20px !important;
+}
+.model-brand{
+  font-size:15px !important;
+}
+.model-title{
+  font-size:clamp(36px, 3.2vw, 48px) !important;
+  line-height:1.04 !important;
+}
+.model-title span{
+  font-size:0.72em;
+}
+.tech-badge{
+  font-size:14px !important;
+  padding:12px 15px !important;
+}
+.model-copy{
+  padding:0 38px 28px !important;
+}
+.persona{
+  font-size:28px !important;
+  line-height:1.28 !important;
+  margin-bottom:10px;
+}
+.model-description{
+  font-size:19px !important;
+  line-height:1.72 !important;
+  max-width:760px;
+}
+.competitors{
+  font-size:15px !important;
+  line-height:1.65 !important;
+}
+.competitors strong{
+  font-size:15px !important;
+}
+
+/* Precio y CTA del modelo */
+.model-range{
+  border-radius:20px !important;
+  padding:24px 24px 22px !important;
+}
+.model-range small{
+  font-size:13px !important;
+  line-height:1.45 !important;
+}
+.model-range strong{
+  font-size:34px !important;
+  line-height:1.06 !important;
+}
+.model-range span{
+  font-size:14px !important;
+  line-height:1.55 !important;
+}
+.model-whatsapp{
+  min-height:50px !important;
+  font-size:15px !important;
+  border-radius:14px !important;
+}
+
+/* Galería */
+.model-real-gallery{
+  margin:0 28px 28px !important;
+  gap:14px !important;
+}
+.real-main{
+  min-height:470px !important;
+}
+.real-main img{
+  min-height:470px !important;
+}
+.real-secondary figure,
+.real-secondary img{
+  min-height:228px !important;
+}
+
+/* Títulos y versiones */
+.versions-heading{
+  padding:0 28px 10px;
+}
+.versions-heading h4,
+.upgrade-box h4{
+  font-size:26px !important;
+  line-height:1.2 !important;
+}
+.versions-heading p{
+  font-size:15px !important;
+  line-height:1.65 !important;
+}
+.version-grid{
+  gap:18px !important;
+}
+.version-card{
+  padding:24px !important;
+  border-radius:20px !important;
+}
+.version-role{
+  font-size:13px !important;
+  padding:8px 11px !important;
+}
+.version-card h5{
+  font-size:25px !important;
+  line-height:1.18 !important;
+}
+.version-card > p{
+  font-size:15px !important;
+  line-height:1.7 !important;
+}
+.version-meta span{
+  font-size:13px !important;
+}
+.version-meta b{
+  font-size:15px !important;
+}
+.version-whatsapp{
+  min-height:48px !important;
+  font-size:15px !important;
+}
+
+/* Qué cambia / recomendación */
+.upgrade-box{
+  margin:0 28px 28px !important;
+}
+.upgrade-grid{
+  gap:0 24px !important;
+}
+.upgrade-step{
+  padding:16px 0 !important;
+}
+.upgrade-step b{
+  font-size:16px !important;
+}
+.upgrade-step p{
+  font-size:15px !important;
+  line-height:1.65 !important;
+}
+.recommendation{
+  font-size:15px !important;
+  line-height:1.68 !important;
+  padding:19px 22px !important;
+}
+
+/* Comparaciones */
+.comparison{
+  margin:0 28px 26px !important;
+  border-radius:20px !important;
+}
+.comparison > summary,
+.comparison-full > summary{
+  min-height:76px !important;
+  padding:18px 22px !important;
+}
+.comparison summary strong{
+  font-size:18px !important;
+}
+.comparison summary small{
+  font-size:14px !important;
+  line-height:1.5 !important;
+}
+.comparison-content{
+  padding:18px !important;
+}
+.comparison-table th,
+.comparison-table td{
+  padding:15px 16px !important;
+  font-size:15px !important;
+}
+.comparison-table td:first-child{
+  min-width:210px !important;
+}
+.comparison-full-content{
+  padding:16px !important;
+}
+
+/* Consideraciones finales y navegación */
+.consider-box{
+  margin:0 28px 22px !important;
+  padding:4px 0 0 20px !important;
+}
+.consider-box strong{
+  font-size:18px !important;
+}
+.consider-box p{
+  font-size:15px !important;
+  line-height:1.68 !important;
+}
+.price-disclaimer{
+  margin:0 28px 16px !important;
+  font-size:13px !important;
+  line-height:1.6 !important;
+}
+.model-pager{
+  margin:0 28px 0 !important;
+  font-size:14px !important;
+}
+.model-pager a{
+  font-size:14px !important;
+}
+
+/* CTA final */
+.final-cta{
+  padding:72px 7vw !important;
+}
+.final-cta h2{
+  font-size:clamp(38px, 4vw, 56px) !important;
+}
+.final-cta p{
+  font-size:18px !important;
+  line-height:1.65 !important;
+}
+.final-cta a{
+  min-height:52px !important;
+  font-size:16px !important;
+  padding:0 22px !important;
+}
+
+/* Adaptación móvil: sigue grande, pero usable */
+@media(max-width:1080px){
+  .model-copy{
+    gap:24px !important;
+  }
+  .model-description{
+    font-size:18px !important;
+  }
+  .persona{
+    font-size:26px !important;
+  }
+}
+
+@media(max-width:700px){
+  html{
+    font-size:17px;
+  }
+  .site-header{
+    min-height:72px;
+  }
+  .header-cta{
+    min-height:42px !important;
+    font-size:14px !important;
+  }
+  .page-hero{
+    padding:32px 20px 20px !important;
+  }
+  .page-hero h1{
+    font-size:46px !important;
+  }
+  .page-hero > div:first-child > p:last-child{
+    font-size:17px !important;
+    line-height:1.58 !important;
+  }
+  .hero-signature{
+    font-size:13px !important;
+    margin-top:12px !important;
+  }
+
+  .quick-guidance{
+    padding:12px 16px 16px !important;
+    gap:10px !important;
+  }
+  .quick-guidance article{
+    padding:16px !important;
+  }
+  .quick-guidance strong{
+    font-size:16px !important;
+  }
+  .quick-guidance span{
+    font-size:14px !important;
+  }
+
+  .navigation-hub{
+    padding:10px 16px 18px !important;
+  }
+  .filter-counter{
+    font-size:13px !important;
+  }
+  .clear-filters{
+    min-height:38px !important;
+    font-size:13px !important;
+  }
+  .filter-panel--premium summary,
+  .filter-panel summary{
+    min-height:58px !important;
+    padding:12px 14px !important;
+  }
+  .filter-panel--premium summary span,
+  .filter-panel summary span,
+  .filter-panel--premium summary strong,
+  .filter-panel summary strong,
+  .filter-chip{
+    font-size:14px !important;
+  }
+  .filter-chip{
+    min-height:42px !important;
+  }
+
+  .segment-section{
+    padding:0 14px 40px !important;
+  }
+  .segment-header{
+    margin:0 -14px 20px !important;
+    padding:24px 20px 22px !important;
+  }
+  .segment-header h2{
+    font-size:34px !important;
+  }
+  .segment-header p{
+    font-size:15px !important;
+    line-height:1.56 !important;
+  }
+
+  .model-card{
+    margin-bottom:28px !important;
+  }
+  .model-topline{
+    padding:24px 20px 14px !important;
+  }
+  .model-brand{
+    font-size:13px !important;
+  }
+  .model-title{
+    font-size:30px !important;
+  }
+  .tech-badge{
+    font-size:12px !important;
+    padding:10px 12px !important;
+  }
+  .model-copy{
+    padding:0 20px 18px !important;
+  }
+  .persona{
+    font-size:22px !important;
+  }
+  .model-description{
+    font-size:16px !important;
+    line-height:1.65 !important;
+  }
+  .competitors{
+    font-size:14px !important;
+  }
+  .model-range{
+    padding:18px !important;
+  }
+  .model-range strong{
+    font-size:28px !important;
+  }
+  .model-range small,
+  .model-range span{
+    font-size:13px !important;
+  }
+  .model-whatsapp{
+    min-height:46px !important;
+    font-size:14px !important;
+  }
+
+  .model-real-gallery{
+    margin:0 14px 18px !important;
+    grid-template-columns:1fr !important;
+  }
+  .real-main,
+  .real-main img{
+    min-height:290px !important;
+  }
+  .real-secondary{
+    grid-template-columns:1fr 1fr !important;
+    grid-template-rows:auto !important;
+  }
+  .real-secondary figure,
+  .real-secondary img{
+    min-height:150px !important;
+  }
+
+  .versions-heading{
+    padding:0 14px 8px !important;
+  }
+  .versions-heading h4,
+  .upgrade-box h4{
+    font-size:22px !important;
+  }
+  .versions-heading p{
+    font-size:14px !important;
+  }
+  .version-card{
+    padding:18px !important;
+  }
+  .version-role{
+    font-size:12px !important;
+  }
+  .version-card h5{
+    font-size:21px !important;
+  }
+  .version-card > p{
+    font-size:15px !important;
+  }
+  .version-meta span{
+    font-size:12px !important;
+  }
+  .version-meta b{
+    font-size:14px !important;
+  }
+
+  .upgrade-box,
+  .comparison,
+  .consider-box{
+    margin-left:14px !important;
+    margin-right:14px !important;
+  }
+  .upgrade-step b{
+    font-size:15px !important;
+  }
+  .upgrade-step p,
+  .recommendation,
+  .consider-box p{
+    font-size:14px !important;
+  }
+  .comparison > summary,
+  .comparison-full > summary{
+    min-height:66px !important;
+    padding:16px !important;
+  }
+  .comparison summary strong{
+    font-size:16px !important;
+  }
+  .comparison summary small{
+    font-size:13px !important;
+  }
+  .comparison-content{
+    padding:10px !important;
+  }
+  .comparison-table th,
+  .comparison-table td{
+    font-size:14px !important;
+    padding:13px !important;
+  }
+  .consider-box strong{
+    font-size:16px !important;
+  }
+  .price-disclaimer{
+    margin:0 14px 12px !important;
+    font-size:12px !important;
+  }
+  .model-pager{
+    margin:0 14px !important;
+    font-size:13px !important;
+  }
+
+  .final-cta{
+    padding:48px 20px !important;
+  }
+  .final-cta h2{
+    font-size:34px !important;
+  }
+  .final-cta p{
+    font-size:16px !important;
+  }
+}
