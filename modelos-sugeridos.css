@@ -1036,3 +1036,237 @@ p{
     min-height:44px;
   }
 }
+
+
+/* =========================================================
+   V6 — FILTROS V4 EN VERTICAL + MÁS CONTRASTE ENTRE MODELOS
+   ========================================================= */
+
+/* Filtros: misma sensación premium de V4, pero apilados */
+.navigation-hub{
+  padding:20px 7vw 30px;
+  background:#FFFFFF;
+}
+.filter-toolbar{
+  width:min(1320px,100%);
+  margin:0 auto 10px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:14px;
+}
+.filter-stack{
+  width:min(1320px,100%);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.filter-panel--premium{
+  width:100%;
+  border:1px solid #DCE5EC;
+  border-radius:18px;
+  background:#F8FAFB;
+  overflow:hidden;
+  box-shadow:0 8px 22px rgba(13,31,53,.035);
+}
+.filter-panel--premium summary{
+  min-height:62px;
+  padding:14px 18px;
+  display:grid;
+  grid-template-columns:1fr auto 24px;
+  align-items:center;
+  gap:14px;
+}
+.filter-panel--premium summary span{
+  color:#52667A;
+  font-size:12px;
+  font-weight:700;
+}
+.filter-panel--premium summary strong{
+  color:var(--green);
+  font-size:12px;
+  font-weight:700;
+  text-align:right;
+}
+.filter-panel--premium summary::after{
+  justify-self:end;
+}
+.filter-panel--premium[open]{
+  background:#FFFFFF;
+  border-color:#CFE2DA;
+}
+.filter-panel--premium[open] summary{
+  background:linear-gradient(180deg,#FBFDFC,#F4FAF7);
+}
+.filter-options{
+  padding:0 16px 16px;
+  border-top:1px solid #E8EEF2;
+}
+.filter-options--models{
+  max-height:280px;
+  overflow:auto;
+}
+.clear-filters{
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+
+/* Más variedad visual entre modelos */
+.segment-section{
+  padding-top:72px;
+  padding-bottom:72px;
+}
+.segment-section:nth-of-type(odd){
+  background:#F6F9FB!important;
+}
+.segment-section:nth-of-type(even){
+  background:#EEF6F3!important;
+}
+.segment-section:nth-of-type(3n){
+  background:#F4F7FC!important;
+}
+
+.model-card{
+  background:#FFFFFF;
+  border:1px solid #DCE5EC;
+}
+.segment-section:nth-of-type(odd) .model-card{
+  box-shadow:0 20px 55px rgba(13,31,53,.07);
+}
+.segment-section:nth-of-type(even) .model-card{
+  box-shadow:0 20px 55px rgba(20,92,72,.08);
+}
+.segment-section:nth-of-type(3n) .model-card{
+  box-shadow:0 20px 55px rgba(39,74,120,.075);
+}
+
+/* Algunas cajas pasan a ser texto editorial, no tarjetas repetidas */
+.competitors{
+  padding:0;
+  background:transparent;
+  border:0;
+  color:#6A7A89;
+  font-size:12px;
+  line-height:1.55;
+}
+.competitors strong{
+  margin-bottom:4px;
+  color:#314A5E;
+}
+.upgrade-box{
+  margin:0 28px 24px;
+  padding:8px 0 0;
+  background:transparent;
+  border:0;
+  border-top:1px solid #DCE5EC;
+  border-radius:0;
+}
+.upgrade-box h4{
+  margin-top:16px;
+}
+.upgrade-step{
+  padding:15px 0;
+  background:transparent;
+  border-bottom:1px solid #E7EDF1;
+  border-radius:0;
+}
+.upgrade-step:last-child{
+  border-bottom:0;
+}
+.recommendation{
+  margin-top:12px;
+  padding:16px 18px;
+  border-top:0;
+  border-left:3px solid var(--green);
+  background:#F3FAF7;
+  border-radius:0 12px 12px 0;
+}
+.consider-box{
+  padding:18px 20px;
+  border:1px solid #DCE6EC;
+  border-radius:14px;
+  background:#F8FAFB;
+}
+.consider-box strong{
+  color:#26475B;
+}
+.model-range{
+  background:linear-gradient(135deg,#EFF9F5,#E6F5EF);
+  border-color:#C9E5DA;
+}
+.version-card{
+  background:#FFFFFF;
+}
+.version-card.recommended{
+  background:linear-gradient(180deg,#F7FCFA,#EEF8F4);
+}
+
+/* Variación sutil por modelo para romper monotonía */
+.model-card:nth-of-type(3n+1) .model-range{
+  background:linear-gradient(135deg,#EFF9F5,#E7F5F0);
+}
+.model-card:nth-of-type(3n+2) .model-range{
+  background:linear-gradient(135deg,#F1F6FB,#E8F1F8);
+  border-color:#D0E0ED;
+}
+.model-card:nth-of-type(3n+3) .model-range{
+  background:linear-gradient(135deg,#F7F4EC,#F0EBDC);
+  border-color:#E5DCC6;
+}
+.model-card:nth-of-type(3n+2) .model-range strong{
+  color:#245A7A;
+}
+.model-card:nth-of-type(3n+3) .model-range strong{
+  color:#7C622A;
+}
+.model-card:nth-of-type(3n+2) .model-whatsapp,
+.model-card:nth-of-type(3n+3) .model-whatsapp{
+  background:var(--green);
+}
+
+/* Comparativas menos pesadas visualmente */
+.comparison{
+  background:transparent;
+  border-color:#D9E3E9;
+}
+.comparison>summary{
+  background:#F8FAFB;
+}
+.comparison-content{
+  background:#FFFFFF;
+}
+.comparison-full>summary{
+  background:#FBFCFD;
+}
+
+/* Mobile */
+@media(max-width:700px){
+  .navigation-hub{
+    padding:12px 16px 20px;
+  }
+  .filter-toolbar{
+    justify-content:space-between;
+    margin-bottom:8px;
+  }
+  .filter-stack{
+    gap:8px;
+  }
+  .filter-panel--premium summary{
+    min-height:52px;
+    padding:10px 13px;
+    grid-template-columns:1fr auto 20px;
+  }
+  .segment-section{
+    padding-top:46px;
+    padding-bottom:46px;
+  }
+  .upgrade-box{
+    margin-left:14px;
+    margin-right:14px;
+  }
+  .consider-box{
+    padding:16px;
+  }
+}
