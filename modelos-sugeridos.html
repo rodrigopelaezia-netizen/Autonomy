@@ -6,6 +6,9 @@
   <title>Modelos sugeridos 2026 | AutoNomy.bo</title>
   <meta name="description" content="Guía AutoNomy de modelos electrificados sugeridos para Bolivia.">
   <meta name="theme-color" content="#0D1F35">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="modelos-sugeridos.css">
 </head>
 <body>
@@ -32,13 +35,9 @@
       <div>
         <p class="eyebrow">Guía AutoNomy 2026</p>
         <h1>Modelos sugeridos</h1>
-        <p>Explora, compara y entiende qué resuelve cada vehículo antes de entrar a la ficha técnica.</p>
+        <p>Una guía clara para comparar tecnologías, entender diferencias y elegir según tu forma real de manejar.</p>
       </div>
-      <div class="hero-stats">
-        <article><strong>27</strong><span>modelos sugeridos</span></article>
-        <article><strong>67</strong><span>versiones seleccionadas</span></article>
-        <article><strong>CLTC</strong><span>estándar de autonomía</span></article>
-      </div>
+      <div class="hero-signature">Selección orientada a uso real en Bolivia</div>
     </section>
 
     <section class="quick-guidance">
@@ -51,38 +50,38 @@
       <div class="filter-hub-heading">
         <div>
           <p class="eyebrow">Encuentra tu punto de partida</p>
-          <h2>Filtra solo cuando lo necesites</h2>
-          <p>Los controles quedan aquí arriba y no ocupan espacio mientras recorres los modelos.</p>
+          <h2>Reduce la lista con criterios simples</h2>
+          <p>Filtra por tecnología o tipo de vehículo. Luego entra directamente al modelo que quieras revisar.</p>
         </div>
         <div class="filter-status">
           <span class="filter-counter"></span>
-          <button class="clear-filters" type="button">Limpiar filtros</button>
+          <button class="clear-filters" type="button">Restablecer filtros</button>
         </div>
       </div>
 
-      <div class="filter-accordion">
-        <details class="filter-panel" id="energy-filter-panel">
-          <summary>
-            <span>Tipo de energía</span>
+      <div class="filter-layout">
+        <section class="filter-static-panel" aria-labelledby="energy-filter-title">
+          <div class="filter-static-heading">
+            <span id="energy-filter-title">Tipo de energía</span>
             <strong id="energy-filter-summary">Todos</strong>
-          </summary>
-          <nav id="energy-nav" class="filter-options" aria-label="Filtrar por energía"></nav>
-        </details>
+          </div>
+          <nav id="energy-nav" class="filter-options filter-options--static" aria-label="Filtrar por energía"></nav>
+        </section>
 
-        <details class="filter-panel" id="segment-filter-panel">
-          <summary>
-            <span>Segmento</span>
+        <section class="filter-static-panel" aria-labelledby="segment-filter-title">
+          <div class="filter-static-heading">
+            <span id="segment-filter-title">Segmento</span>
             <strong id="segment-filter-summary">Todos</strong>
-          </summary>
-          <nav id="segment-nav" class="filter-options" aria-label="Filtrar por segmento"></nav>
-        </details>
+          </div>
+          <nav id="segment-nav" class="filter-options filter-options--static" aria-label="Filtrar por segmento"></nav>
+        </section>
 
         <details class="filter-panel filter-panel--models" id="model-filter-panel">
           <summary>
-            <span>Ir a un modelo</span>
-            <strong id="model-filter-summary">Seleccionar</strong>
+            <span>Ir a un modelo específico</span>
+            <strong id="model-filter-summary">Seleccionar modelo</strong>
           </summary>
-          <nav id="model-nav" class="filter-options filter-options--models" aria-label="Ir a un modelo"></nav>
+          <nav id="model-nav" class="filter-options filter-options--models" aria-label="Ir a un modelo específico"></nav>
         </details>
       </div>
     </section>
@@ -593,9 +592,9 @@ try {
       const selectedModel =
         data.models.find(model => model.id === activeModel);
   
-      energySummary.textContent = energyLabel;
-      segmentSummary.textContent = segmentLabel;
-      modelSummary.textContent = selectedModel
+      if (energySummary) energySummary.textContent = energyLabel;
+      if (segmentSummary) segmentSummary.textContent = segmentLabel;
+      if (modelSummary) modelSummary.textContent = selectedModel
         ? `${selectedModel.brand} ${selectedModel.name}`
         : "Seleccionar";
   

@@ -473,11 +473,13 @@
     const selectedModel =
       data.models.find(model => model.id === activeModel);
 
-    energySummary.textContent = energyLabel;
-    segmentSummary.textContent = segmentLabel;
-    modelSummary.textContent = selectedModel
-      ? `${selectedModel.brand} ${selectedModel.name}`
-      : "Seleccionar";
+    if (energySummary) energySummary.textContent = energyLabel;
+    if (segmentSummary) segmentSummary.textContent = segmentLabel;
+    if (modelSummary) {
+      modelSummary.textContent = selectedModel
+        ? `${selectedModel.brand} ${selectedModel.name}`
+        : "Seleccionar modelo";
+    }
 
     energyNav.innerHTML = ENERGY.map(([id, label]) => `
       <button class="filter-chip ${activeEnergy === id ? "active" : ""}"
