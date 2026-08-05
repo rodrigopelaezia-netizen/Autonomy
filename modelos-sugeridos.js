@@ -97,9 +97,9 @@
 
   const priceRange = model => {
     const values = model.versions
-      .map(version => version.price)
-      .filter(value => Number.isFinite(value));
-    if (!values.length) return "Consultar";
+      .map(version => Number(version.price))
+      .filter(value => Number.isFinite(value) && value > 0);
+    if (!values.length) return "Consultar precio";
     const min = Math.min(...values);
     const max = Math.max(...values);
     return min === max
