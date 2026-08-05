@@ -96,7 +96,10 @@
       .replaceAll(",", ".")}`;
 
   const priceRange = model => {
-    const values = model.versions.map(version => version.price);
+    const values = model.versions
+      .map(version => version.price)
+      .filter(value => Number.isFinite(value));
+    if (!values.length) return "Consultar";
     const min = Math.min(...values);
     const max = Math.max(...values);
     return min === max
@@ -116,6 +119,7 @@
 
   const filteredModels = () =>
     data.models.filter(model =>
+      !model.hidden &&
       (activeEnergy === "all" || energyType(model) === activeEnergy) &&
       (activeSegment === "all" || model.segment === activeSegment)
     );
